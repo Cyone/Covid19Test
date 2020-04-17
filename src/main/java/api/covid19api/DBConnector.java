@@ -40,8 +40,7 @@ public class DBConnector {
             if (sqlException.getErrorCode() == 1049 && !"testCovid".equals(dbName)) {
                 createDB();
                 connection = makeConnection();
-            }
-            throw sqlException;
+            }else throw sqlException;
         }
         createTableGlobal();
         createTableCountries();

@@ -35,4 +35,9 @@ public class ApiCallerTest {
         assertTrue(recoveryPercent*100.0 > 20);
         assertTrue(recoveryPercent*100.0 <=30);
     }
+
+    @Test
+    public void testConnection(){
+        assertNotNull(dbc.getConnection());
+    }
 }
